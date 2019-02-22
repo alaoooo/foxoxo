@@ -25,9 +25,20 @@ client.on('message', message => {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`:small_orange_diamond: اضغط هنا `)
+        .setTitle(`:small_orange_diamond: invite your server `)
         .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=548436570361823232&permissions=8&scope=bot`)
-        .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
+        .setThumbnail("https://lh3.googleusercontent.com/QWWnPPqYFIhYSOhCLI8gDqxfAroEB9y56zbeMZxOhbs2Npe9bkFCghr-9ZO5xG2PcZCKKQ=s64")        
+     message.channel.sendEmbed(embed);
+       }
+   });
+client.on('message', message => {
+        if (message.content === "$lw 5erok") {
+            if(!message.channel.guild) return;
+        let embed = new Discord.RichEmbed()
+        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
+        .setTitle(`:small_orange_diamond: click here `)
+        .setURL("https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png")
+        .setThumbnail("https://lh3.googleusercontent.com/QWWnPPqYFIhYSOhCLI8gDqxfAroEB9y56zbeMZxOhbs2Npe9bkFCghr-9ZO5xG2PcZCKKQ=s64")        
      message.channel.sendEmbed(embed);
        }
    });
