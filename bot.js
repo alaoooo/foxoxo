@@ -27,21 +27,526 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO Super Bot`` ')
-            .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
-            .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
-            .addField('``servers``', [client.guilds.size], true)
-            .addField('``channels``' , `[ ${client.channels.size} ]` , true)
-            .addField('``Users``' ,`[ ${client.users.size} ]` , true)
-            .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
-            .addField('``My ID``' , `[ ${client.user.id} ]` , true)
-			      .addField('``My Prefix``' , `[ - ]` , true)
-			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By | KillerFox ')
+            .setTitle('``INFO Killer||  ||Bot`` ')
+            .addField('**بينق البوت ||  ||**' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('**رامات البوت ||  ||**', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('**سيرفرات الي دخلها البوت ||  ||**', [client.guilds.size], true)
+            .addField('**الرومات ||  ||**' , `[ ${client.channels.size} ]` , true)
+            .addField('**عدد المستخدمين ||  ||**' ,`[ ${client.users.size} ]` , true)
+            .addField('**اسم البوت ||  ||**' , `[ ${client.user.tag} ]` , true)
+            .addField('**ايدي البوت||  ||**' , `[ ${client.user.id} ]` , true)
+			      .addField('**My Prefix ||  ||**' , `[ $ ]` , true)
+			      .addField('**My Language ||  ||**' , `[ Java Script ]` , true)
+                              .addField('**عدد اوامر البوت ||  ||**' , `[ Java Script ]` , true)
+			      .setFooter('||  || By | KillerFox ||  ||')
     })
 }
 });
 
+
+client.on('message', message => {
+    if (message.content === 'ping') {
+        message.reply('${client.guild.size}');
+    }
+});
+
+client.on('message', message => {
+    if (message.content == "$جمع") {
+        var x = ["212+212=?",
+"321+43=?",
+"4534+23",
+"23+3434=?",
+"2311+32=?",
+"765+343=?",
+"343+1121=?",
+"43234+1=?",
+"10000000000+2=?",
+"232+21=?",
+"12+23=?",                 
+];
+        var x2 = ['424',
+        "364",
+        "4557",
+        "3457",
+		"2343",
+		"1108",
+    "1464",
+    "43235",
+   "10000000002",
+  "253",
+  "35",
+                  
+        ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(` اول شخص يحل جمع : __**${x[x3]}**_
+لديك 15 ثانية للاجابة`).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 15000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author} لقد قمت بحل جمع في الوقت المناسب  `);
+        })
+        })
+    }
+})
+
+client.on('message', message => {
+    if (message.content == "$ضرب") {
+        var x = ["9x9=?",
+"8x9=?",
+"4x4=?",
+"2x22=?",
+"12x2=?",
+"7x7=?",
+"5x5=?",
+"9x3=?",
+"2342432x0=?",
+"21321x1=?",
+"3x4x5=?",
+];
+        var x2 = ['81',
+        "72",
+        "16",
+        "42",
+		"22",
+		"49",
+		"25",
+		"27",
+    "0",
+    "21321",
+    "60",
+        
+        ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(`  اول شخص يحل ضرب :  __**${x[x3]}**__
+لديك 15 ثانية لحل ضرب`).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 15000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author}لقد قمت بكتابة حل  في الوقت المناسب  `);
+        })
+        })
+    }
+})
+
+client.on('message', message => {
+    if (message.content == "$طرح") {
+        var x = ["4326-2345=?",
+"5822-8547=?",
+"543-823=?",
+"1500-500=?",
+"4322-2768=?",
+"5652-1255=?",
+"3421-11234=?",
+"34545-1233=?",
+"23456-54332=?",
+"2312-3433=?",
+"4321-321=?",
+];
+        var x2 = ['1981',
+        "-2725",
+        "-280",
+        "1000",
+"1554",
+"4397",
+"-7813",
+"33312",
+"-30876",
+"1121",
+"4000",
+
+        
+        ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(`  اول شخص يكتب حل صح :  __**${x[x3]}**__
+لديك 15 ثانية لكتابة حل صحيح`).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 15000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author}لقد قمت بكتابة حل في الوقت المناسب  `);
+        })
+        })
+    }
+})
+
+client.on('message', message => {
+    if (message.content == "$عواصم"){
+        var x = ["ما عاصمة **المغرب**",
+    "ما عاصمة **افغانستان**",
+    "ما عاصمة **الجزائر **",
+    "ما عاصمة **الارجنتين",
+    "ما عاصمة ** مصر**",
+    "ما عاصمة ** استراليا**",
+    "ما عاصمة ** البرازيل**",
+    "ما عاصمة **قطر  **",
+    "ما عاصمة **السعودية  **",
+    "ما عاصمة **سوريا  **",
+    "ما عاصمة **تركيا  **",
+    "ما عاصمة **العراق  **",
+    "ما عاصمة **لبنان  **",
+    "ما عاصمة **فلسطين  **",
+    "ما عاصمة **امريكا  **",
+   "ما عاصمة **كندا  **",
+   "ما عاصمة **البرازيل  **",
+];
+        var x2 = ['الرباط',
+        "كابل",
+        "الجزائر",
+      "بوينس ايرس",
+"القاهرة",
+"كانبرا",
+"برازيليا",
+"الدوحة",
+      "الرياض",
+      "دمشق",
+      "انقرة",
+    "بغداد",
+      "بيروت",
+    "القدس",
+  "وشنطن",
+    "اوتاوا",
+  "برازيليا",
+  
+        
+        ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(` اول شخص يكتب عاصمة صح :  __**${x[x3]}**__
+لديك 20 ثانية لكتابة عاصمة صحيحة`).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 20000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author}لقد قمت بكتابة عاصمة صح في الوقت المناسب  `);
+        })
+        })
+    }
+})
+
+client.on('message', message => {
+    if (message.content == "$فكك") {
+        var x = ["محمد",
+"مدرسة",
+"بيت",
+"الله",
+"بيت مقدس",
+"مهندس",
+"ريضيات",
+"بسم الله رحمن رحيم",
+"طماطم",
+"سيرفر",
+];
+        var x2 = ['م ح م ح',
+        "م د ر س ة",
+        "ب ي ت ",
+        "ا ل ل ه",
+"ب ي ت م ق د س",
+"م ه ن د س",
+"ر ي ض ي ا ت",
+"ب س م ا ل ل ه ر ح م ن ر ح ي م",
+"ط م ا ط م",
+"س ي ر ف ر",
+     ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(`  فكك
+ :  __**${x[x3]}**__
+لديك 20 ثانية`).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 20000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author}لقد قمت بتفكيك كلمة في وقت مناسب`);
+        })
+        })
+    }
+})
+
+client.on('message', message => {
+if(message.content.startsWith("$فواكه")) {
+  let slot1 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
+  let slots1 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
+  let slots2 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
+  let slots3 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
+  let we;
+  if(slots1 === slots2 && slots2 === slots3) {
+    we = "Win!"
+  } else {
+    we = "Lose!"
+  }
+  message.channel.send(`${slots1} | ${slots2} | ${slots3} - ${we}`)
+}
+});
+
+client.on("message", function(message) {
+var prefix = "$";
+   if(message.content.startsWith(prefix + "rsp")) {
+    let messageArgs = message.content.split(" ").slice(1).join(" ");
+    let messageRPS = message.content.split(" ").slice(2).join(" ");
+    let arrayRPS = ['**# - حجرة**','**# - ورقة**','**# - مقص**'];
+    let result = `${arrayRPS[Math.floor(Math.random() * arrayRPS.length)]}`;
+    var RpsEmbed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setThumbnail(message.author.avatarURL)
+    .addField("حجرة","🇷",true)
+    .addField("ورقة","🇵",true)
+    .addField("مقص","🇸",true)
+    message.channel.send(RpsEmbed).then(msg => {
+        msg.react(' 🇷')
+        msg.react("🇸")
+        msg.react("🇵")
+.then(() => msg.react('🇷'))
+.then(() =>msg.react('🇸'))
+.then(() => msg.react('🇵'))
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '🇷' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '🇸' && user.id === message.author.id;
+let reaction3Filter = (reaction, user) => reaction.emoji.name === '🇵' && user.id === message.author.id;
+let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
+    
+let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
+let reaction3 = msg.createReactionCollector(reaction3Filter, { time: 12000 });
+reaction1.on("collect", r => {
+        message.channel.send(result)
+})
+reaction2.on("collect", r => {
+        message.channel.send(result)
+})
+reaction3.on("collect", r => {
+        message.channel.send(result)
+})
+
+    })
+}
+});
+
+client.on('message', message => {
+    if (message.content == "$اسرع") {
+        var x = ["ملك",
+"ماستر",
+"يوم",
+"أرض الأحلام",
+"ألبرازيل",
+"العراق",
+"ألمملكة ألعربية ألسعودية",
+"القسطنطينية",
+"النهاية",
+"امازون",
+"جافاسكربت",
+"سهله مو صعبه",
+"طبق رطب مرق بقر",
+"متجر",
+"شجرة الأوغيري",
+"عش العصفور",
+"هلا بلخميس",
+"الحوت الأزرق",
+];
+        var x2 = ['ملك',
+        "ماستر",
+        "يوم",
+        "أرض الأحلام",
+"ألبرازيل",
+"العراق",
+"ألمملكة ألعربية ألسعودية",
+"القسطنطينية",
+"النهاية",
+"امازون",
+"جافاسكربت",
+"سهله مو صعبه",
+"طبق رطب مرق بقر",
+"متجر",
+"شجرة الأوغيري",
+"عش العصفور",
+"هلا بلخميس",
+"الحوت الأزرق",
+        
+        
+        
+        
+        ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(` اول شخص يكتب :  __**${x[x3]}**__
+لديك 15 ثانية للاجابة`).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 15000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author} لقد قمت بكتابة الكلمة في الوقت المناسب  `);
+        })
+        })
+    }
+})
+
+client.on('message', message => {
+    if (message.content == "$اسائلة دينية") {
+        var x = ["اكبر سوره في قران",
+"اصغر سوره في قران",
+"اول سوره نزلت على محمد (ص)؟",
+"ثاني اطول سوره في القران من ناحيت المساحه",
+"ثاني اطول سوره في القران من ناحيت ايات",
+"هل ذكر اسم نبي محمد في انجيل او تورات ؟؟",
+"من الذي هاجر مع نبي محمد الى  يثرب",
+"من نام في فراش النبي محمد",
+"متى نزل القران على محمد",
+"نحن كم سنه هجريه",
+"كم عدد ايام عيد الفطر",
+
+];
+        var x2 = ['سورة البقرة',
+        "سورة الكوثر",
+        "صورة القلم",
+        "سورة النساء",
+"سورة الشعراء",
+"نعم ذكر",
+"ابو بكر الصديق",
+"علي بن ابي طالب",
+"في عمر الربعين سنة",
+"نحن 1440",
+"ثلاث ايام",
+
+        ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(` اسائلة ديني :__**${x[x3]}**__
+لديك 15 ثانية للاجابة`).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 15000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author} لقد قمت بكتابة الجواب في الوقت المناسب `);
+        })
+        })
+    }
+})
+
+client.on("message", message => {
+    if (message.content === ("$help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("RANDOM")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`**
+[❖═════ KillerBot ═══════❖]
+برفكس = $
+عدد اوامر = 
+By = Fox Team
+ping = ${Date.now() - message.createdTimestamp}ms
+[❖═════ KillerBot ═══════❖]
+$فكك
+$اسرع
+$عواصم
+$ضرب
+$جمع
+$طرح
+$اسائلة دينية
+$فواكه
+$rsp
+$hack 
+$pubg 
+$e
+$em
+$mc
+$خواطر
+$لو خيروك
+$صراحه
+$حب
+$حكم
+[❖═════  الأوامر العامه ═══════❖]
+ $قوانين
+لـــ معرفة قوانين السيرفر
+$id 
+معلومات حسابك
+$botinfo 
+معلومات البوت
+$ping 
+سرعه اتصال البوت
+
+[❖═════  اوامر اداره ═══════❖]
+
+$bc  
+لـ البرودكاست
+$clear 
+لـ مسح الشات
+$kick  
+لـ طرد عضو
+$ban  
+لـ حظر عضو
+$say
+لتكلم بصفه البوت
+$cv
+عمل روم صوتي
+$owner
+مبرمج البوت
+$role
+سحب رتبه واعاء رتبه
+$ct
+عمل روم كاتبي
+
+[❖═════ KillerBot ═══════❖]
+اذا وجهتك مشكلة او عندك اقتراح توجه 
+الى سيرفر دعم فني
+$support
+$ping 
+$inv
+[❖═════ FoxGames ═══════❖]
+       **  `)
+   message.channel.sendEmbed(embed)
+   
+   }
+   });  
 
 client.on('message', message => {
         if (message.content === "$inv") {
@@ -54,13 +559,14 @@ client.on('message', message => {
      message.channel.sendEmbed(embed);
        }
    });
+var lwkerok = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png"];
 client.on('message', message => {
         if (message.content === "$lw 5erok") {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`:small_orange_diamond: click here `)
-        .setURL("https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png")
+        .setURL(lwkerok[Math.floor(Math.random() * lwkerok.length)])
         .setThumbnail("https://lh3.googleusercontent.com/QWWnPPqYFIhYSOhCLI8gDqxfAroEB9y56zbeMZxOhbs2Npe9bkFCghr-9ZO5xG2PcZCKKQ=s64")        
      message.channel.sendEmbed(embed);
        }
