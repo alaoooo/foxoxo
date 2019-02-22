@@ -37,7 +37,7 @@ client.on('message', message => {
             .addField('**ايدي البوت||  ||**' , `[ ${client.user.id} ]` , true)
 			      .addField('**My Prefix ||  ||**' , `[ $ ]` , true)
 			      .addField('**My Language ||  ||**' , `[ Java Script ]` , true)
-                              .addField('**عدد اوامر البوت ||  ||**' , `[ Java Script ]` , true)
+                              .addField('**عدد اوامر البوت ||  ||**' , `[ 50 ]` , true)
 			      .setFooter('||  || By | KillerFox ||  ||')
     })
 }
