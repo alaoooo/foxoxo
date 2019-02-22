@@ -429,10 +429,10 @@ client.on('message', message => {
     if (message.content === "$help") {
     let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-  .setFooter(`KillerFox`, '')
+  .setFooter(`KillerBot`, '2019/2/10')
   .setColor("#000000")
   .addField("Done | تــــم" , ":envelope: | :sleuth_or_spy::skin-tone-3: تم الارسال الاوامر الي خاص")
-  .addField("** Developer  KillerFox :wrench: **","** KillerFox **")
+  .addField("** Developer Bot KillerFox :wrench: **","** بوت متكامل **")
   
   
   message.channel.sendEmbed(embed);
