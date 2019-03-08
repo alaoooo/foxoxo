@@ -57,7 +57,8 @@ client.on('message', message => {
      ];
        
    var x3 = Math.floor(Math.random()*x.length)
-       message.channel.send('**اكتب اسرع  لديك 20 ثانيه **').setImage(${x}).then(msg1=> {
+         .setAuthor(`⏳ |You have »15« seconds to type the word`)
+              .setImage(${x})
             var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
                 maxMatches : 1,
                 time : 20000,
