@@ -20,6 +20,63 @@ client.on('ready', function(){
   console.log('---------------')
 });
 
+
+client.on('message', message => {
+    if (message.content == "$سرعة") {
+        var x = ["https://cdn.discordapp.com/attachments/553287876243357721/553515081296773140/bandicam_2019-03-07_12-50-04-444.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515077697929241/bandicam_2019-03-07_12-45-37-573.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515078180405249/bandicam_2019-03-07_12-48-29-284.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515078515949568/bandicam_2019-03-07_12-48-07-648.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515078129942548/bandicam_2019-03-07_12-49-15-371.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515077458853898/bandicam_2019-03-07_12-48-44-988.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515076385112065/bandicam_2019-03-07_12-47-45-547.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515076162813963/bandicam_2019-03-07_12-47-11-464.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515073897889793/bandicam_2019-03-07_12-46-28-283.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515071716982806/bandicam_2019-03-07_12-44-55-900.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515050653188097/bandicam_2019-03-07_12-44-33-759.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515045334810656/bandicam_2019-03-07_12-44-15-396.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515038917525505/bandicam_2019-03-07_12-43-48-900.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515019153965066/bandicam_2019-03-07_12-43-09-939.jpg",
+"https://cdn.discordapp.com/attachments/553287876243357721/553515014066012160/bandicam_2019-03-07_12-42-33-352.jpg",
+];
+        var x2 = ['By KillerFox',
+        "طبق رطب مرق بقر",
+        "عش العصفور",
+        "شجرة الأوغيري",
+"ليوبليانا",
+"كانيكي",
+"خير و طماطم",
+"تفاح و زلاطه",
+"خيار وطرشي",
+"جافاسكربت",
+"امازون",
+"النهاية",
+"القسطنطينية",
+"السعودية",
+"البرازيل",
+     ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(`  اكتب اسرع
+ :  ${x[x3]}
+لديك 20 ثانية`).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 20000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author}لقد قمت بكتابة الكلمه في الوقت المناسب`);
+        })
+        })
+    }
+});
+
 client.on('message', message => {
     if (message.content.startsWith("$bot")) {
     message.channel.send({
