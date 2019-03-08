@@ -20,7 +20,6 @@ client.on('ready', function(){
   console.log('---------------')
 });
 
-
 client.on('message', message => {
     if (message.content == "$سرعة") {
         var x = ["https://cdn.discordapp.com/attachments/553287876243357721/553515081296773140/bandicam_2019-03-07_12-50-04-444.jpg",
@@ -56,19 +55,20 @@ client.on('message', message => {
 "البرازيل",
      ];
        
-   var x3 = Math.floor(Math.random()*x.length)
-             message.channel.send(`⏳ |You have »20« seconds to type the word`)
-              .setImage(`${x[x3]}`).then(msg1=> {
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(`**  اكتب اسرع لديك 20 ثانية**`).then
+        const embed = new Discord.RichEmbed()
+        .setImage${x[x3]}.then(msg1=> {
             var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
                 maxMatches : 1,
                 time : 20000,
                 errors : ['time']
             })
         r.catch(() => {
-            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح
             الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
         })
-        
+       
         r.then((collected)=> {
             message.channel.send(`${collected.first().author}لقد قمت بكتابة الكلمه في الوقت المناسب`);
         })
