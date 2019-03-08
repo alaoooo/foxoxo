@@ -55,21 +55,22 @@ client.on('message', message => {
 "السعودية",
 "البرازيل",
      ];
-        
-        var x3 = Math.floor(Math.random()*x.length)
-        message.channel.send(`  اكتب اسرع
- :  ${x[x3]}
-لديك 20 ثانية`).then(msg1=> {
+       
+         var x3 = Math.floor(Math.random()*x.length)
+const embed = new Discord.RichEmbed()
+.setTitle("Speed Game | :joystick:")
+.setImage(${x[x3]})
+message.channel.send(embed).then(msg1=> {
             var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
                 maxMatches : 1,
                 time : 20000,
                 errors : ['time']
             })
         r.catch(() => {
-            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح
             الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
         })
-        
+       
         r.then((collected)=> {
             message.channel.send(`${collected.first().author}لقد قمت بكتابة الكلمه في الوقت المناسب`);
         })
