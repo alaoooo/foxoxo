@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [' $help','KillerBot','By KillerFox',' KillerBot ',' $help'];
+    var setGame = [' $help','jak the best','By jak',' بواسطه جاك ',' $help'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -376,7 +376,7 @@ client.on('message', message => {
 "جافاسكربت",
 "سهله مو صعبه",
 "طبق رطب مرق بقر",
-"متجر",
+"جاك يحبكم",
 "شجرة الأوغيري",
 "عش العصفور",
 "هلا بلخميس",
@@ -395,7 +395,7 @@ client.on('message', message => {
 "جافاسكربت",
 "سهله مو صعبه",
 "طبق رطب مرق بقر",
-"متجر",
+"جاك يحبكم",
 "شجرة الأوغيري",
 "عش العصفور",
 "هلا بلخميس",
@@ -541,9 +541,13 @@ $ct
 [❖═════ KillerBot ═══════❖]
 اذا وجهتك مشكلة او عندك اقتراح 
 $sug
-سيرفر الدعم الفني  :  قريبا قريبا
+سيرفر الدعم الفني  : https://discord.gg/fp8Y4Wq
 $ping 
 $inv
+
+
+رابط البوت
+https://discordapp.com/api/oauth2/authorize?client_id=563872621297401856&permissions=8&scope=bot
 [❖═════ FoxGames ═══════❖]
        **  `)
    message.channel.sendEmbed(embed)
@@ -893,7 +897,7 @@ const zead = [
    '*** مريم : يا ايها المخادع اين انت ***',
    '*** مريم : اعلم انك هنا في المنزل ***',
    '*** مريم : ماذا تريد ان تسمع ***',
-   '*** مريم : اضغط على الرابط اهداء مني لك | https://www.youtube.com/watch?v=hvSiuQccmtg ***',
+   '*** مريم : اضغط على الرابط اهداء مني لك | https://www.youtube.com/channel/UCgnpGUgHs94bMDg5SK75zlw?view_as=subscriber ***',
    '*** احد ما خرج من المنزل ***',
    '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدني في نشر البوت وادخل هذا السيرفر  ***'
 ]
@@ -1260,7 +1264,7 @@ client.on('message', message => {
   if (message.content.startsWith( prefix + "sug")) {
   if (!message.channel.guild) return;
   let args = message.content.split(" ").slice(1).join(' ');
-  client.channels.get("518341981890543616").send(
+  client.channels.get("563870588607922176").send(
       "\n" + "**" + "● اقتراحات سيرفر :" + "**" +
       "\n" + "**" + "» " + message.guild.name + "**" +
       "\n" + "**" + " ● مرسل الاقتراح : " + "**" +
@@ -1357,7 +1361,7 @@ client.on('message' , message => {
 if (message.content === '$owner') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
-      .addField("**Developer BoT KillerFox**")
+      .addField("**Developer BoT جاك**")
 .setColor('#B101FC')
   message.author.sendEmbed(embed);
     }
